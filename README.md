@@ -1,54 +1,44 @@
-# React + TypeScript + Vite
+# ORIPA
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+# Gacha UI React App
 
-Currently, two official plugins are available:
+This is a React-based user interface for a Gacha-style application. It includes a main section displaying point-based cards and a footer navigation bar.
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+## 🚀 Features
 
-## Expanding the ESLint configuration
+- Responsive layout for mobile devices
+- Gacha buttons with customizable values
+- Point progress bar
+- Jewel and menu indicators at the top
+- Footer navigation with icons and labels
 
-If you are developing a production application, we recommend updating the configuration to enable type-aware lint rules:
+## 🧩 Components
 
-```js
-export default tseslint.config({
-  extends: [
-    // Remove ...tseslint.configs.recommended and replace with this
-    ...tseslint.configs.recommendedTypeChecked,
-    // Alternatively, use this for stricter rules
-    ...tseslint.configs.strictTypeChecked,
-    // Optionally, add this for stylistic rules
-    ...tseslint.configs.stylisticTypeChecked,
-  ],
-  languageOptions: {
-    // other options...
-    parserOptions: {
-      project: ['./tsconfig.node.json', './tsconfig.app.json'],
-      tsconfigRootDir: import.meta.dirname,
-    },
-  },
-})
-```
+### `MainSection`
+Displays the main content of the app:
+- Jewel indicators (red and white)
+- Points progress section
+- Gacha interaction buttons
+- Reusable cards
 
-You can also install [eslint-plugin-react-x](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-x) and [eslint-plugin-react-dom](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-dom) for React-specific lint rules:
+### `Footer`
+Contains the navigation bar with the following tabs:
+- Trade
+- My Card
+- Gacha
+- TopUp
+- Invite
 
-```js
-// eslint.config.js
-import reactX from 'eslint-plugin-react-x'
-import reactDom from 'eslint-plugin-react-dom'
+## 📁 Folder Structure
 
-export default tseslint.config({
-  plugins: {
-    // Add the react-x and react-dom plugins
-    'react-x': reactX,
-    'react-dom': reactDom,
-  },
-  rules: {
-    // other rules...
-    // Enable its recommended typescript rules
-    ...reactX.configs['recommended-typescript'].rules,
-    ...reactDom.configs.recommended.rules,
-  },
-})
-```
+src/
+│
+├── components/
+│ ├── MainSection.jsx
+│ └── Footer.jsx
+│
+├── assets/
+│ └── images/ # Place all image assets here
+│
+├── App.jsx
+└── index.js
